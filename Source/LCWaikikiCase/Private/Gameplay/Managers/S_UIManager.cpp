@@ -37,12 +37,6 @@ void US_UIManager::OnPuzzleCompleted(const FGameStats& GameStats)
 
 void US_UIManager::CreateEndScreenWidget(const FGameStats& GameStats)
 {
-	if (!DS_UIManager)
-	{
-		UE_LOG(LogTemp, Error, TEXT("DS_UIManager is null"));
-		return;
-	}
-
 	APlayerController* PC = GetGameInstance()->GetWorld()->GetFirstPlayerController();
 
 	UUserWidget* Widget = UWidgetBlueprintLibrary::Create(GetGameInstance()->GetWorld(), DS_UIManager->W_EndScreen.LoadSynchronous(), PC);
@@ -50,7 +44,7 @@ void US_UIManager::CreateEndScreenWidget(const FGameStats& GameStats)
 	if (W_EndScreen)
 	{
 		W_EndScreen->AddToViewport();
-		W_EndScreen->InitalizeEndScreen(GameStats);
+		W_EndScreen->InitializeEndScreen(GameStats);
 	}
 	else
 	{

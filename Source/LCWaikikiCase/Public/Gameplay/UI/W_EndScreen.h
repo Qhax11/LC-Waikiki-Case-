@@ -27,7 +27,7 @@ public:
     * This function is called by the UI Manager after the widget is created,
     * and is responsible for passing data (e.g., move count, time taken, etc.) to the UI elements for display.
     */
-	void InitalizeEndScreen(const FGameStats& GameStats);
+	void InitializeEndScreen(const FGameStats& GameStats);
 
 	/**
 	 * Blueprint event for initializing the end screen UI.
@@ -35,5 +35,5 @@ public:
 	 * Called from InitalizeEndScreen in C++ to allow Blueprint-based visual setup.
 	 */
 	UFUNCTION(BlueprintImplementableEvent)
-	void BP_InitalizeEndScreen(const FGameStats& GameStats);
+	void BP_InitializeEndScreen(const FGameStats& GameStats);
 };

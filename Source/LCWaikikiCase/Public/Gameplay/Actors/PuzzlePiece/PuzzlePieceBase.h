@@ -27,6 +27,7 @@ public:
 	void SetCollisionDisabled();
 
 	/** Blueprint event triggered when the piece starts dragging from a slot */
+	/** Called from S_PazzleManager */
 	UFUNCTION(BlueprintImplementableEvent)
 	void BP_HandleDragFromSlotEvent();
 
